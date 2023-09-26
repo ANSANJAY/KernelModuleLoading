@@ -1,4 +1,4 @@
-```markdown
+
 # Kernel Module Exploration Repository 🌐
 
 Welcome to the Kernel Module Exploration Repository! This repository serves as a comprehensive collection, focusing on the intricate workings of insmod and `KBUILD_MODNAME` in kernel modules, aimed to benefit both fledgling and experienced kernel developers. Dive in to explore the nuanced realms of kernel module development!
@@ -42,4 +42,4 @@ This repository is licensed under the [GNU General Public License](./LICENSE). P
 Special thanks to all the kernel enthusiasts and contributors who have made this exploration insightful and enriching!
 
 Feel the kernel vibes and Happy Exploring! 🌿💻
-```
+
