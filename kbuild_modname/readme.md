@@ -1,5 +1,8 @@
-### 1. Explain the technical concept 📘
-`KBUILD_MODNAME` is a macro in Linux kernel development used when writing kernel modules. It represents the name of the module being compiled. This macro is particularly useful for debugging and logging purposes, allowing developers to easily identify the module responsible for a specific log entry or an error message. `KBUILD_MODNAME` is automatically defined as the name of the module in the Makefile during the build process, so developers do not have to define it explicitly in their code.
+### 1. KBUILD_MODNAME
+
+`KBUILD_MODNAME` is a macro in Linux kernel development used when writing kernel modules.
+- It represents the name of the module being compiled.
+- This macro is particularly useful for debugging and logging purposes, allowing developers to easily identify the module responsible for a specific log entry or an error message. `KBUILD_MODNAME` is automatically defined as the name of the module in the `Makefile` during the build process, so developers do not have to define it explicitly in their code.
 
 ### 2. Curious Questions 🤔
 **Q1:** Why is `KBUILD_MODNAME` primarily used within the kernel modules?
@@ -12,6 +15,7 @@
 **A3:** `KBUILD_MODNAME` can be particularly helpful in scenarios involving debugging and tracing. When developers are reviewing log entries or error messages, having the module name readily available through `KBUILD_MODNAME` helps in quickly identifying which module is associated with a particular event or error, thus aiding in pinpointing issues and enhancing the development and maintenance process.
 
 ### 3. Explain the concept in simple words 🌟
+
 Imagine you're building a huge LEGO castle 🏰, and each LEGO block represents a different module. Each LEGO block (module) has a unique name written on it - that’s like `KBUILD_MODNAME` in the kernel module world!
 
 So, when you are playing around with your LEGO castle and a piece breaks or doesn’t fit right 🛠️, you look at the name on the block. That name tells you exactly which block (module) has the problem. It helps you quickly find and fix any issues with your castle without having to check each block one by one.

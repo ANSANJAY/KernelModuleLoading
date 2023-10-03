@@ -1,17 +1,18 @@
 # Kernel Module Loading
 
-### 1.The Technical concept 📘
-A kernel module is a piece of code that can be dynamically added or removed from the kernel, allowing the core functionality of the operating system to be extended without a reboot. When you execute `insmod` on a module, you are initiating the process of loading a kernel module into the running kernel.
+A kernel module is a piece of code that can be dynamically added or removed from the kernel, allowing the core functionality of the operating system to be extended `without a reboot`
+
+-  When you execute `insmod` on a module, you are initiating the process of loading a kernel module into the running kernel.
 
 Here's what happens in a bit more detail:
 
 a) `init_module()`: This is called to inform the kernel that an attempt is being made to load a module, passing control over to the kernel.
 
 b) `sys_init_module()`: Run within the kernel, this function performs several operations:
-   - Verifies the permissions of the user attempting to load the module.
+   - `Verifies the permissions` of the user attempting to load the module.
    - Calls `load_module` after verification which:
-     - Assigns temporary memory and transfers the ELF (Executable and Linkable Format) module from user space to kernel memory with `copy_from_user`.
-     - Checks the sanity of the ELF file ensuring it's a proper ELF file.
+     - Assigns `temporary memory and transfers the ELF` (Executable and Linkable Format) module from user space to kernel memory with `copy_from_user`.
+     - Checks the `sanity` of the ELF file ensuring it's a proper ELF file.
      - Generates convenience variables (offsets) in the temporary memory space based on the ELF file interpretation.
      - Copies user arguments to the module into kernel memory.
      - Performs symbol resolution.
